@@ -6,7 +6,8 @@ export default {
   ],
   theme: {
     fontFamily:{
-      'sans': ['Urbanist']
+      'sans': ['Urbanist',],
+      'monoton': ['Monoton', 'sans-serif'],
     },
     extend: {
 

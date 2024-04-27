@@ -41,7 +41,7 @@ const Navbar = () => {
     </div>
 
 {/* MObile View */}
-<div className="flex sm:hidden flex-col w-[300px] h-[120px] top-[24px] left-[30px] bg-opacity-25 font-sans bg-[#D6D6D6] backdrop-filter backdrop-blur-lg rounded-[35px] pt-[20px] pr-[24px] pb-[20px] pl-[24px]  sticky gap-[14px] ">
+<div className="mx-auto flex sm:hidden fixed flex-col w-[300px] h-[120px] top-[24px] left-[30px] bg-opacity-25 font-sans bg-[#D6D6D6] backdrop-filter backdrop-blur-lg rounded-[35px] pt-[20px] pr-[24px] pb-[20px] pl-[24px] gap-[14px] ">
         <div className="flex justify-around">
 <div className="font-bold w-[94px] h-[22px] text-[18px] leading-[21.6px] top-[20px] left-[20px] ">
     Createnary
