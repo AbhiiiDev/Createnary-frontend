@@ -3,7 +3,7 @@ const Navbar = () => {
   return (
     <>
    {/* Laptop View */}
-    <div className="hidden sm:flex  w-[1024px] h-[90px] top-[15px] left-[208px] bg-opacity-25 font-sans bg-[#D6D6D6] backdrop-filter backdrop-blur-lg rounded-[35px] pt-[20px] pr-[24px] pb-[20px] pl-[24px]  sticky gap-[50px] ">
+    <div className="hidden sm:flex fixed w-[1024px] h-[90px] top-[15px] left-[208px] bg-opacity-25 font-sans bg-[#D6D6D6] backdrop-filter backdrop-blur-lg z-20 rounded-[35px] pt-[20px] pr-[24px] pb-[20px] pl-[24px] gap-[50px] ">
    <div className="w-[434px] h-[50px] flex gap-[50px] items-center">
 <div className="font-bold text-[22px] leading-[26.4px] top-[31px] left-[45.25px] items-center">
     Createnary

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div className='font-sans'>
+      <div className='font-sans overflow-hidden '>
         <Main/>
       </div>
     </>

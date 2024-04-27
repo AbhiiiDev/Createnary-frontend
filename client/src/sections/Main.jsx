@@ -8,8 +8,10 @@ const Main = () => {
   return (
     <div  className="sm:h-[1024px] h-[800px] w-[360px] md:w-[1440px] bg-[url('/src/assets/MobileBackground.jpg')] sm:bg-[url('/src/assets/Background.jpg')] top-[-100px]">
     <Navbar/>
-    <div className='w-[264px] h-[160px] mt-[80px] ml-[48px] rounded-[12px]'>
-    <div className='font-bold text-[24px]'>
+
+    {/* Mobile View */}
+    <div className=' sm:hidden w-[264px] h-[160px] mt-[80px] ml-[48px] rounded-[12px]'>
+    <div className='font-bold text-[24px]'>``
     Welcome To India’s First <span className='text-[#674A8E]'> Creator’s Marketplace</span>
     </div>
     <div className='w-[231px] text-center text-[16px] font-[600px] mt-2 text-[#000000] '>
@@ -19,6 +21,38 @@ const Main = () => {
 Get Started
     </div>
     </div>
+    <div className='sm:hidden w-[450px] h-[450px] mt-[-5px] ml-[-44px]'>
+    <img src="/src/assets/Mobile.svg" alt="Mobile" className='w-[300px] h-[450px] ml-[75px] ' />
+    </div>
+
+{/* Laptop View */}
+
+<div  className='flex'>
+
+    <div className='w-[474px] h-[360px] flex flex-col gap-[50px] mt-[180px] ml-[140px]'>
+<div className='w-[474px]  h-[256px] flex flex-col gap-[28px]'>
+  <div className='w-[474px] h-[162px] flex flex-col gap-[40px]'>
+  <div className='font-bold text-[40px] leading-[48px]'>
+    Welcome To India’s First <span className='text-[#674A8E]'> Creator’s Marketplace</span>
+    </div>
+    <div className='font-bold text-[22px] leading-[26.4px] '>
+    Create your first E-Store @ Zero Cost
+    </div>
+  </div>
+    <div className='h-[66px] font-[500px] leading-[21.6px] text-[#11151D] text-[18px]'>
+    Empower your creativity with Createnary. Showcase, sell, and connect with a global audience effortlessly, turn your products into profits.
+    </div>
+</div>
+<div className='w-[144px] h-[54px] rounded-[18px] py-[16px] px-[24px] text-white bg-[#4A508E] font-[600px] text-[18px] leading-[21.6px]'>
+Get Started
+</div>
+    </div>
+
+    <div className='w-[630px] h-[630px] ml-[200px] mt-[70px] z-0 '>
+<img src="/src/assets/Mobile.svg" alt="Mobile" className='w-[420px] h-[630px] drop-shadow-xl' />
+    </div>
+
+</div>
 </div>
   )
 }
