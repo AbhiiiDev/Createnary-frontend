@@ -5,7 +5,7 @@ const Link = () => {
 <>
 {/* Laptop View */}
 
-    <div className="hidden w-[1440px] sm:flex items-center h-[724px] mt-[-250px] p-[40px] bg-[#4A508E]">
+    <div className="hidden w-[1440px] xl:flex items-center  h-auto max-h-[724px] mt-[-250px] p-[40px] bg-[#4A508E]">
         <img src="/src/assets/Left.svg" className="w-[18px] h-[33px] cursor-pointer " alt="" />
       <div className="w-[1264px] h-[644px] flex flex-col items-center gap-[50px] ">
         <div className="w-[1264px] h-[540px] flex flex-col items-center  gap-[50px] ">
@@ -34,6 +34,35 @@ const Link = () => {
       </div>
       <img src="/src/assets/Right.svg" className="w-[18px] h-[33px] cursor-pointer " alt="" />
     </div>
+    
+{/* Tablet View */}
+
+    <div className="hidden xl:hidden mx-auto sm:flex items-center h-auto max-h-[724px] mt-[-250px] p-[40px] bg-[#4A508E]">
+    <img src="/src/assets/Left.svg" className="w-[18px] h-[33px] cursor-pointer" alt="" />
+    <div className="w-full max-w-[90%] sm:max-w-[80%] flex flex-col items-center gap-[50px]">
+        <div className="w-full max-w-[90%] sm:max-w-[80%] flex flex-col items-center gap-[50px]">
+            <div className="w-full max-w-[90%] sm:max-w-[80%] flex flex-col gap-[15px]">
+                <div className=" max-w-[90%] w-auto  text-[#F8F9FB] font-bold text-[40px] leading-[48px]">
+                    You audience wants links
+                </div>
+                <div className="w-auto max-w-[90%] sm:max-w-[80%] font-[500] text-[#F8F9FB] text-[18px] leading-[21.6px]">
+                    Make it easy for them by linking products to every post and video
+                </div>
+            </div>
+            <div>
+                <img src="/src/assets/Link.jpg" className="w-full mx-auto max-w-[90%] sm:max-w-[80%] h-[auto] bg-transparent rounded-[35px] drop-shadow-lg" alt="" />
+            </div>
+        </div>
+        <div className="w-[143px] h-[54px]  max-w-[90%] sm:max-w-[80%] rounded-[18px] py-[16px] px-[24px] bg-[#F8F9FB]">
+            <span className="text-[#11151D] text-[18px] font-[600]">Try for Free</span>
+        </div>
+    </div>
+    <img src="/src/assets/Right.svg" className="w-[18px] h-[33px] cursor-pointer" alt="" />
+</div>
+
+
+
+
 
     {/* Mobile View */}
 

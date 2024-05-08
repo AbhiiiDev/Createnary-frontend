@@ -1,5 +1,7 @@
 
 import Navbar from './components/Navbar'
+import AccordianSection from './sections/AccordianSection'
+import Earning from './sections/Earning'
 import Footer from './sections/Footer'
 import Link from './sections/Link'
 import Main from './sections/Main'
@@ -13,6 +15,8 @@ function App() {
         <Navbar />
         <Main/>
         <Link/>
+        <Earning/>
+        <AccordianSection/>
         <Footer/>
       </div>
     </>
