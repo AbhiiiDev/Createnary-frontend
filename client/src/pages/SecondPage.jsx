@@ -67,9 +67,7 @@ const SecondPage = () => {
       
       
     </div>
-    <div>
-        <Footer />
-      </div>
+   
     </div>
     
   );
