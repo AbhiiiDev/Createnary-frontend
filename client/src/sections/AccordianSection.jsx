@@ -1,5 +1,6 @@
 import React from 'react'
 import Accordian from '../components/Accordian'
+import Footer from '../components/Footer'
 
 const AccordianSection = () => {
   
@@ -45,6 +46,8 @@ const AccordianSection = () => {
   
   
     return (
+        <>
+        
     <div className='flex flex-col mt-16 gap-[32px] ml-[16px] sm:w-[730px] sm:h-[715px] sm:items-center sm:mx-auto'>
         <div className='w-[327px] h-[69px] md:w-[619px] md:h-[92px] flex flex-col sm:items-center gap-[16px] ml-[1px] sm:mx-auto'>
 <div className='w-[258px] h-[19px] text-[16px] sm:w-[435px] md:w-[435px] md:h-[32px] font-bold sm:text-[27px] md:text-center text-[#11151D]'>FREQUENTLY ASKED QUESTION</div>
@@ -56,7 +59,10 @@ Check out our full documentation
 </div>
         </div>
     <Accordian sections={data}/>
+
     </div>
+
+        </>
   )
 }
 
