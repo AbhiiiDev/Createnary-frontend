@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 const Main = () => {
@@ -13,7 +14,7 @@ const Main = () => {
           Create your E-store @ Zero Cost
         </div>
         <div className="w-[126px] h-[43px] rounded-[12px] mt-5 ml-12 bg-[#4A508E] px-[20px] py-[12px] text-white font-[600px] text-[16px] leding-[19.2px] text-center">
-          Get Started
+       <Link to='/secondPage'>   Get Started</Link>
         </div>
       </div>
       <div className="sm:hidden w-[450px] h-[450px] mt-[50px] ml-[-44px]">
@@ -45,7 +46,7 @@ const Main = () => {
             </div>
           </div>
           <div className="w-[144px] h-[54px] rounded-[18px] py-[16px] px-[24px] text-white bg-[#4A508E] font-[600px] text-[18px] leading-[21.6px]">
-            Get Started
+          <Link to='/secondPage'>   Get Started</Link>
           </div>
         </div>
 

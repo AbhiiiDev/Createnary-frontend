@@ -1,6 +1,6 @@
 import React from 'react';
-import img from '../public/image.png';
-import Footer from './Footer';
+import Share from '../assets/Share.jpg';
+import Footer from '../components/Footer';
 
 const SecondPage = () => {
   return (
@@ -42,25 +42,25 @@ const SecondPage = () => {
         <div className='mb-14 md:mb-32'>
           <h2 className='font-semibold mb-4'>Share the holidays, stays and experiences with your friends and family</h2>
           <p className='mb-2 text-sm'>You receive trending & curated Itineraries and Insider deals on Hotels & Flights to share</p>
-          <img src={img} alt='' />
+          <img src={Share} alt='' />
         </div>
 
         <div className='mb-14 md:mb-32'>
           <h2 className='font-semibold mb-4'>Share the holidays, stays and experiences with your friends and family</h2>
           <p className='mb-2 text-sm'>You receive trending & curated Itineraries and Insider deals on Hotels & Flights to share</p>
-          <img src={img} alt='' />
+          <img src={Share} alt='' />
         </div>
         
         <div className='mb-14 md:mb-32'>
           <h2 className='font-semibold mb-4'>Share the holidays, stays and experiences with your friends and family</h2>
           <p className='mb-2 text-sm'>You receive trending & curated Itineraries and Insider deals on Hotels & Flights to share</p>
-          <img src={img} alt='' />
+          <img src={Share} alt='' />
         </div>
         
         <div >
           <h2 className='font-semibold mb-4'>Share the holidays, stays and experiences with your friends and family</h2>
           <p className='mb-2 text-sm'>You receive trending & curated Itineraries and Insider deals on Hotels & Flights to share</p>
-          <img src={img} alt='' />
+          <img src={Share} alt='' />
         </div>
       </div>
       </div>
