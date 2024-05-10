@@ -1,6 +1,6 @@
 import React from 'react';
-import img from '../public/image.png';
-import Footer from './Footer';
+import img from '../assets/Share.jpg';
+import Footer from '../components/Footer';
 
 const SecondPage = () => {
   return (
@@ -12,7 +12,7 @@ const SecondPage = () => {
         <button
           type='submit'
           className='text-md mt-8 h-11 w-36 font-semibold text-white bg-[#4A508E] border border-transparent px-6 py-2 rounded-2xl hover:bg-white hover:text-[#4A508E] hover:border-[#4A508E] transition duration-300 ease-in-out'>
-          Get Started
+          Get Started 
         </button>
       </div>
       <div className='flex flex-row w-full mt-8 m-10'>
