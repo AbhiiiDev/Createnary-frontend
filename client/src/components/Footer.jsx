@@ -18,7 +18,7 @@ const Footer = () => {
         {name : '+91 99999 99999' ,link :'/'},
     ]
   return (
-    <div className=' flex flex-col w-full bg-[#4A508E]'>
+    <div className=' flex flex-col w-full bg-[#4A508E] mt-14'>
         <div className='flex flex-col md:flex-row'>
             <div className='ml-4 mb-3 md:w-2/5 md:flex md:align-center md:justify-center'><div className='mt-10 md:mt-32'><img src={logo} alt="logo" /></div></div>
             <div className='m-5 md:m-8 text-white text-sm'>

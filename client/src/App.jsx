@@ -2,7 +2,7 @@
 import Navbar from './components/Navbar'
 import AccordianSection from './sections/AccordianSection'
 import Earning from './sections/Earning'
-import Footer from './sections/Footer'
+import Footer from './components/Footer'
 import SecondPage from './pages/SecondPage'
 import Link from './sections/Link'
 import Main from './sections/Main'
@@ -26,12 +26,12 @@ function App() {
     <Link/>
     <Earning/>
     <AccordianSection/>
-    <Footer/>
   </div>
 </>
 }/>
   <Route path='/secondPage' element={<SecondPage/>}/>
       </Routes>
+      <Footer/>
     </Router>
   )
 }
