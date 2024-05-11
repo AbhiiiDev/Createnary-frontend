@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Rectangle from "../assets/Rectangle.svg";
+import Rectangle from "../../public/assets/Rectangle.svg";
 
 const Earning = () => {
   const [followers, setFollowers] = useState(1000);

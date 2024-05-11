@@ -1,6 +1,6 @@
 import React from 'react';
-import Share from '../assets/Share.jpg';
-import Footer from '../components/Footer';
+import Share from '../../public/assets/Share.jpg';
+
 
 const SecondPage = () => {
   return (
