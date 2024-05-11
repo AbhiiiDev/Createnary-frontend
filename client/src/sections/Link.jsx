@@ -5,7 +5,7 @@ const Link = () => {
 <>
 {/* Laptop View */}
 
-    <div className="hidden w-[1440px] xl:flex items-center  h-auto max-h-[724px] mt-[-250px] p-[40px] bg-[#4A508E]">
+    <div className="hidden w-[1440px] xl:flex mr-4 items-center  h-auto max-h-[724px] mt-[-250px] p-[40px] bg-[#4A508E]">
         <img src="/src/assets/Left.svg" className="w-[18px] h-[33px] cursor-pointer " alt="" />
       <div className="w-[1264px] h-[644px] flex flex-col items-center gap-[50px] ">
         <div className="w-[1264px] h-[540px] flex flex-col items-center  gap-[50px] ">
@@ -32,7 +32,7 @@ const Link = () => {
             <span className="text-[#11151D] text-[18px] font-[600px]">Try for Free</span>
         </div>
       </div>
-      <img src="/src/assets/Right.svg" className="w-[18px] h-[33px] cursor-pointer " alt="" />
+      <img src="/src/assets/Right.svg" className="mr-[20px] w-[18px] h-[33px] cursor-pointer " alt="" />
     </div>
     
 {/* Tablet View */}
@@ -57,7 +57,7 @@ const Link = () => {
             <span className="text-[#11151D] text-[18px] font-[600]">Try for Free</span>
         </div>
     </div>
-    <img src="/src/assets/Right.svg" className="w-[18px] h-[33px] cursor-pointer" alt="" />
+    <img src="/src/assets/Right.svg" className="w-[18px] h-[33px]  cursor-pointer" alt="" />
 </div>
 
 
