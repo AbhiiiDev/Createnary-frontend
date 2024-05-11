@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { FaPlus } from "react-icons/fa6";
+import { FaMinus } from "react-icons/fa6";
+
 
 const Accordian = ({ sections }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -24,9 +27,9 @@ const Accordian = ({ sections }) => {
         >
           {
             openIndex === index ?
-            <img src="/src/assets/Minus.svg" alt="Close"/>
+            <FaMinus/>
            
-            : <img src="/src/assets/Plus.svg" alt="Expand" />
+            :<FaPlus/>
             }
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
   return (
@@ -17,7 +18,7 @@ const Navbar = () => {
    <div className="flex w-[449.5px] h-[42px] rounded-[15px] items-center">
 <div className="flex w-[300px] h-[22px] top-[34px] left-[529.25px] gap-[30px] items-center">
     <div className="w-[66px] h-[22px] flex items-center ">
-        <img className="top-[1.88px] w-[18.13px] h-[16.25px] bg-transparent" src="/src/assets/Vector.svg" alt="cart" />
+        <FiShoppingCart className="top-[1.88px] w-[18.13px] h-[16.25px] bg-transparent"/>
         <div className="left-[30px] ml-2 text-center w-[36px] h-[22px] font-[500px] text-[18px] ">Cart</div>
         </div>
     <div className="w-[80px] h-[22px] flex items-center ">
