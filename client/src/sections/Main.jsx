@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const Main = () => {
   return (
-    <div className="sm:h-[1024px] h-[800px] w-[360px] md:w-[1440px] bg-[url('/src/assets/MobileBackground.jpg')] sm:bg-[url('/src/assets/Background.jpg')] ">
+    <div className="sm:h-[1024px] h-[800px] w-[360px] md:w-[1440px] bg-[url('/src/public/assets/MobileBackground.jpg')] sm:bg-[url('/src/public/assets/Background.jpg')] ">
       {/* Mobile View */}
       <div className=" sm:hidden w-[264px] h-[160px] mt-[184px] ml-[48px] rounded-[12px]">
         <div className="font-bold text-[24px]">
