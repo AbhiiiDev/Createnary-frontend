@@ -1,5 +1,6 @@
 import React from 'react'
 import Accordian from '../components/Accordian'
+
 import Footer from '../components/Footer'
 
 const AccordianSection = () => {

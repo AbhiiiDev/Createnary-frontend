@@ -20,7 +20,7 @@ const Main = () => {
       </div>
       <div className="sm:hidden w-[450px] h-[450px] mt-[50px] ml-[-44px]">
         <img
-          src="/src/assets/Mobile.svg"
+          src="/src/public/assets/Mobile.svg"
           alt="Mobile"
           className="w-[300px] h-[450px] ml-[75px] "
         />
@@ -53,7 +53,7 @@ const Main = () => {
 
         <div className="w-[630px] h-[630px] ml-[200px] mt-[70px] z-0 ">
           <img
-            src="/src/assets/Mobile.svg"
+            src="/src/public/assets/Mobile.svg"
             alt="Mobile"
             className="w-[420px] h-[630px] drop-shadow-xl"
           />
