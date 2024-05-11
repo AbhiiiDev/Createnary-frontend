@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/Createnary.svg'
+import logo from '../../pubilc/assets/Createnary.svg'
 import { CiLocationOn } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 
