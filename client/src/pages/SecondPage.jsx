@@ -27,7 +27,7 @@ const SecondPage = () => {
 
                 <div className=''>
                     <div className='w-10 h-10 bg-[#4A508E] rounded-md'><h1 className=' flex justify-center align-center pt-1 text-2xl text-white'>1</h1></div>
-                    <div className="h-[517px] border-r border-gray-300 mr-5"></div>
+                    <div className="h-[5px] border-r border-gray-300 mr-5"></div>
                 </div>
                 <div className=''>
                     <div className='w-10 h-10 bg-[#4A508E] rounded-md'>
