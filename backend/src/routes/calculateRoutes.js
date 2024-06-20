@@ -4,7 +4,7 @@ const calculate = require('../controllers/CalcualteController');
 const router=express.Router();
 
 
-router.post('/calculate',calculate);
+router.post('/',calculate);
 
 
 module.exports=router;
