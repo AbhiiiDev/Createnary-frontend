@@ -13,7 +13,7 @@ app.get('/',(req,res)=>{
 })
 
 
-app.use('/api',calculateRoute);
+app.use('/api/calculate',calculateRoute);
 
 app.listen(3000,()=>{
     console.log('server is listening on port 3000');
