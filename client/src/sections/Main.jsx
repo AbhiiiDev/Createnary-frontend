@@ -1,65 +1,44 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
-
+import Navbar from '../components/Navbar'
+import BackgroundImage from '/assets/Background.png'
+import MobileBackground from '/assets/MobileBackground.jpg'
 
 const Main = () => {
   return (
-    <div className="sm:h-[1024px] h-[800px] w-[360px] md:w-[1440px] bg-[url('/src/public/assets/MobileBackground.jpg')] sm:bg-[url('/src/public/assets/Background.jpg')] ">
-      {/* Mobile View */}
-      <div className=" sm:hidden w-[264px] h-[160px] mt-[184px] ml-[48px] rounded-[12px]">
-        <div className="font-bold text-[24px]">
-          Welcome To India’s First
-          <span className="text-[#674A8E]"> Creator’s Marketplace</span>
-        </div>
-        <div className="w-[231px] text-center text-[16px] font-[600px] mt-4 text-[#000000] ">
-          Create your E-store @ Zero Cost
-        </div>
-        <div className="w-[126px] h-[43px] rounded-[12px] mt-5 ml-12 bg-[#4A508E] px-[20px] py-[12px] text-white font-[600px] text-[16px] leding-[19.2px] text-center">
-       <Link to='/secondPage'>   Get Started</Link>
-        </div>
-      </div>
-      <div className="sm:hidden w-[450px] h-[450px] mt-[50px] ml-[-44px]">
-        <img
-          src="/src/public/assets/Mobile.svg"
-          alt="Mobile"
-          className="w-[300px] h-[450px] ml-[75px] "
-        />
-      </div>
-
-      {/* Laptop View */}
-
-      <div className="hidden sm:flex mx-auto">
-        <div className="w-[474px] h-[360px] flex flex-col gap-[50px] mt-[180px] ml-[140px]">
-          <div className="w-[474px]  h-[256px] flex flex-col gap-[28px]">
-            <div className="w-[474px] h-[162px] flex flex-col gap-[40px]">
-              <div className="font-bold text-[40px] leading-[48px]">
-                Welcome To India’s First{" "}
-                <span className="text-[#674A8E]"> Creator’s Marketplace</span>
+    
+        <div className="relative md:min-h-screen">
+          <div className="hidden md:block absolute inset-0">
+            <img src={BackgroundImage} alt="Background" className="w-full h-full object-cover" />
+          </div>
+          <div className="md:hidden absolute inset-0">
+            <img src={MobileBackground} alt="Background" className="w-full h-full object-cover" />
+          </div>
+          <div className="relative z-10">
+            <div className="fixed z-30 top-3 mx-auto md:left-40 md:right-40">
+            <Navbar />
+            </div>
+            <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 md:px-16 lg:px-32">
+              <div className="text-center md:text-left md:w-1/2 space-y-4">
+                <h1 className="text-3xl md:text-5xl font-bold">
+                  Welcome To India's First
+                  <span className="text-[#4A508E]"> Creator's Marketplace</span>
+                </h1>
+                <p className="text-xl md:text-2xl">Create your first E-Store @ Zero Cost</p>
+                <p className="text-gray-700 hidden md:block">
+                  Empower your creativity with Createnary. Showcase, sell, and connect with a global audience effortlessly, turn your products into profits.
+                </p>
+                <button className="mt-4 px-6 py-2 bg-[#4A508E] text-white font-semibold rounded-lg">
+                  Get Started
+                </button>
               </div>
-              <div className="font-bold text-[22px] leading-[26.4px] ">
-                Create your first E-Store @ Zero Cost
+              <div className="mt-8 md:mt-4 md:w-1/2 flex justify-center">
+                <img src="/assets/Mobile.png" alt="Mobile App" className="w-[100%] h-[100%]" />
               </div>
             </div>
-            <div className="h-[66px] font-[500px] leading-[21.6px] text-[#11151D] text-[18px]">
-              Empower your creativity with Createnary. Showcase, sell, and
-              connect with a global audience effortlessly, turn your products
-              into profits.
-            </div>
-          </div>
-          <div className="w-[144px] h-[54px] rounded-[18px] py-[16px] px-[24px] text-white bg-[#4A508E] font-[600px] text-[18px] leading-[21.6px]">
-          <Link to='/secondPage'>   Get Started</Link>
           </div>
         </div>
-
-        <div className="w-[630px] h-[630px] ml-[200px] mt-[70px] z-0 ">
-          <img
-            src="/src/public/assets/Mobile.svg"
-            alt="Mobile"
-            className="w-[420px] h-[630px] drop-shadow-xl"
-          />
-        </div>
-      </div>
-    </div>
+    
   );
 };
 

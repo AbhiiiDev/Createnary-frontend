@@ -37,7 +37,7 @@ const Accordian = ({ sections }) => {
    {  
    openIndex ===index && 
    <>
-   <hr className="mx-auto w-[690px] h-[1px] opacity-[8%] border-[#11151D]"/>
+   <hr className="mx-auto h-[1px] opacity-[8%] border-[#11151D]"/>
 
       <div className="mx-auto w-[295px] md:w-[690px] h-[85px] md:h-[38px] font-medium text-[16px] leading-[19.2px]">
 {item.desc}

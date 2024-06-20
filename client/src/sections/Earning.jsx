@@ -1,10 +1,9 @@
 import { useState } from "react";
-import Rectangle from "../../public/assets/Rectangle.svg";
+import Rectangle from '/assets/Rectangle.png'
 
 const Earning = () => {
   const [followers, setFollowers] = useState(1000);
   const [products, setProducts] = useState(1);
-
   const [monthly, setMonthly] = useState(0);
 
   const handleFollowerChange = (e) => {
@@ -22,32 +21,31 @@ const Earning = () => {
       },
       body: JSON.stringify({ followers, products }),
     });
-    const res=await response.json();
-    setMonthly(res.data); 
-    console.log(res.data)
+    const res = await response.json();
+    setMonthly(res.data);
+    console.log(res.data);
   };
+
   return (
     <>
-      {/* Mobile view */}
-
-      <div className="sm:hidden w-[324.2px] h-[629px] mt-4 ml-[18px]">
-        <div className="h-[19px]">ESTIMATE EARNING POTENTIAL</div>
-        <div className="w-[324.2px] h-[81.92px] mt-3">
-          <div className="font-medium text-[16px] leading-[19.2px] font-sans">
-            What kind of influencer are you?
-          </div>
-          <input
-            type="text"
-            placeholder="Select type"
-            className="w-[324.2px] h-[39.92px] rounded-[8.87px] border-[1.11px] mt-3 border-[#DDDCE0]"
-          />
+      <div className="flex flex-col justify-center items-center ml-8 mt-[5rem] p-4 md:p-0">
+        <div className="w-full max-w-[441px] h-[32px] text-center leading-[32.4px] text-[27px] font-bold">
+          ESTIMATE EARNING POTENTIAL
         </div>
-        <div className="w-[313.88px] h-[140px] ml-[0.12px]">
-          <div className="font-medium text-[16px] leading-[19.2px] mt-2">
-            How many followers do you have ?
-          </div>
-          <div className="h-[91px] ml-[14px] ">
-            <div className="w-[300px] h-[30px] mt-5">
+        <div className="w-full max-w-[866px] h-auto flex flex-col gap-[50px] mt-12">
+          <div className="flex flex-col md:flex-row gap-[120px]">
+            <div className="w-full max-w-[572px] h-auto">
+              <div className="w-full max-w-[349.09px] h-[22px] font-medium text-[18px]">
+                What kind of influencer are you?
+              </div>
+              <input
+                type="text"
+                placeholder="Select type"
+                className="w-full h-[43px] pl-3 rounded-[8.87px] border-[1.11px] mt-3 border-[#DDDCE0]"
+              />
+              <div className="mt-4 font-medium text-[18px] w-full max-w-[370.1px] h-[22px]">
+                How many followers do you have?
+              </div>
               <input
                 type="range"
                 min={10}
@@ -55,10 +53,12 @@ const Earning = () => {
                 defaultValue={10}
                 step={10}
                 value={followers}
-                className="w-[300px] h-[7.5px] bg-gray-300 rounded-full appearance-none"
+                className="mt-9 w-full h-[10px] bg-gray-300 rounded-full appearance-none"
                 onChange={handleFollowerChange}
                 style={{
-                  backgroundImage: `linear-gradient(to right, #4A508E 0%, #4A508E ${(followers - 10) / (500 - 10) * 100}%, #CCCCCC ${(followers - 10) / (500 - 10) * 100}%, #CCCCCC 100%)`,
+                  backgroundImage: `linear-gradient(to right, #4A508E 0%, #4A508E ${
+                    ((followers - 10) / (500 - 10)) * 100
+                  }%, #CCCCCC ${((followers - 10) / (500 - 10)) * 100}%, #CCCCCC 100%)`,
                 }}
               />
               <style jsx>
@@ -66,172 +66,71 @@ const Earning = () => {
                   input[type="range"]::-webkit-slider-thumb {
                     -webkit-appearance: none;
                     appearance: none;
-                    width: 20px; /* Set the width of the thumb */
-                    height: 20px; /* Set the height of the thumb */
-                    background: url(${Rectangle}); /* Set your custom image as background */
-                    background-size: cover; /* Ensure the image covers the entire thumb */
-                    cursor: pointer; /* Change cursor to pointer */
+                    width: 20px;
+                    height: 20px;
+                    background: url(${Rectangle});
+                    background-size: cover;
+                    cursor: pointer;
                   }
                 `}
               </style>
-            </div>
-            <div className="w-[72px] ml-[112.58px] mt-3 h-[41px] rounded-[15px] border-b-2  border-[#4A508E] text-center font-medium">
-              {followers}K
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[313.88px] h-[140px] ml-[0.12px]">
-          <div className="font-medium text-[16px] leading-[19.2px] mt-2">
-            How many products do you list monthly?
-          </div>
-          <div className="h-[91px] ml-[14px] ">
-            <div className="w-[300px] h-[30px] mt-5">
+              <div className="w-[72px] mx-auto mt-3 h-[41px] rounded-[15px] border-b-2 border-[#4A508E] text-center font-medium">
+                {followers}K
+              </div>
+              <div className="mt-4 font-medium text-[18px] w-full max-w-[370.1px] h-[22px]">
+                How many products do you sell per month?
+              </div>
               <input
                 type="range"
-                defaultValue={1}
                 min={1}
                 max={100}
+                defaultValue={1}
                 value={products}
-                className="w-[300px] h-[7.5px] bg-gray-300 rounded-full appearance-none"
+                className="mt-9 w-full h-[10px] bg-gray-300 rounded-full appearance-none"
                 onChange={handleProductChange}
                 style={{
                   backgroundImage: `linear-gradient(to right, #4A508E 0%, #4A508E ${products}%, #CCCCCC ${products}%, #CCCCCC 100%)`,
                 }}
               />
+              <style jsx>
+                {`
+                  input[type="range"]::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    background: url(${Rectangle});
+                    background-size: cover;
+                    cursor: pointer;
+                  }
+                `}
+              </style>
+              <div className="w-[72px] mx-auto mt-3 h-[41px] rounded-[15px] border-b-2 border-[#4A508E] text-center font-medium">
+                {products}
+              </div>
             </div>
-            <div className="w-[72px] ml-[112.58px] mt-3 h-[41px] rounded-[15px] border-b-2  border-[#4A508E] text-center font-medium">
-              {products}
+            <div className="w-full max-w-[174px] h-auto  flex flex-row justify-center items-center md:flex-col gap-[81px] mx-auto md:mx-0">
+              <div className="w-full text-center font-bold text-[22px]">
+                Monthly Earning
+                <div className="font-bold text-[#4A508E] text-[40px]">
+                  ₹{monthly.toLocaleString("en-IN")}
+                </div>
+              </div>
+              <div className="w-full text-center font-bold text-[22px]">
+                Yearly Earning
+                <div className="font-bold text-[#4A508E] text-[40px]">
+                  ₹{(monthly * 12).toLocaleString("en-IN")}
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <button
-          className="w-[108px] h-[43px] rounded-[12px] px-[20px] py-[12px] bg-[#4A508E] font-semibold text-[16px] leading-[19.2px] text-white font-sans ml-[110px] mt-4"
+          className="mt-6 w-[125px] h-[54px] rounded-[18px] text-white bg-[#4A508E] font-semibold text-[18px]"
           onClick={handleCalculate}
         >
           Calculate
         </button>
-
-        <div className="w-[295px] h-[72px] ml-[16px] mt-14 flex">
-          <div className="w-[128.95px]">
-            <div className="font-bold text-[18px] leading-[21.6px] text-center">
-              Monthly Earning
-            </div>
-            <div className="ml-[18.37px] font-bold text-[24px] text-[#4A508E] ">
-              ₹{monthly.toLocaleString('en-IN')}
-            </div>
-          </div>
-          <div className="w-[113.46px] ">
-            <div className="font-bold text-[18px] leading-[21.6px] text-center">
-              Yearly Earning
-            </div>
-            <div className="ml-[18.37px] font-bold text-[24px] text-[#4A508E] text-center ">
-              ₹{(monthly * 12).toLocaleString('en-IN')}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Laptop view */}
-
-      <div className=" hidden sm:block mt-[5rem] w-[866px] h-[651px] ml-[267px] ">
-        <div className="w-[441px] ml-[200px] h-[32px] text-center leading-[32.4px] text-[27px] font-bold ">
-          ESTIMATE EARNING POTENTIAL
-        </div>
-        <div className="w-[866px] h-[559px] flex-col gap-[50px]   mt-12">
-          <div className="h-[455px] flex gap-[120px]">
-            <div className="w-[572px] h-[455px]">
-              <div className="w-[349.09px] h-[22px] font-medium text-[18px]  ">
-                What kind of influencer are you ?
-              </div>
-                <input
-            type="text"
-            placeholder="Select type"
-            className="w-[572px] h-[43px]  rounded-[8.87px] border-[1.11px] mt-3 border-[#DDDCE0]"
-          />
-          <div className="mt-4 font-medium text-[18px] w-[370.1px] h-[22px]">
-          How many followers do you have?
-          </div>
-          <input
-                type="range"
-                min={10}
-                max={500}
-                defaultValue={10}
-                step={10}
-                value={followers}
-                className="mt-9 w-[524.14px] h-[10px] bg-gray-300 rounded-full appearance-none"
-                onChange={handleFollowerChange}
-                style={{
-                  backgroundImage: `linear-gradient(to right, #4A508E 0%, #4A508E ${(followers - 10) / (500 - 10) * 100}%, #CCCCCC ${(followers - 10) / (500 - 10) * 100}%, #CCCCCC 100%)`,
-                }}
-              />
-              <style jsx>
-                {`
-                  input[type="range"]::-webkit-slider-thumb {
-                    -webkit-appearance: none;
-                    appearance: none;
-                    width: 20px; /* Set the width of the thumb */
-                    height: 20px; /* Set the height of the thumb */
-                    background: url(${Rectangle}); /* Set your custom image as background */
-                    background-size: cover; /* Ensure the image covers the entire thumb */
-                    cursor: pointer; /* Change cursor to pointer */
-                  }
-                `}
-              </style>
-              <div className="w-[72px] ml-[226.58px] mt-3 h-[41px] rounded-[15px] border-b-2  border-[#4A508E] text-center font-medium">
-              {followers}K
-            </div>
-            <div className="mt-4 font-medium text-[18px] w-[370.1px] h-[22px]">
-          How many followers do you have?
-          </div>
-            <input
-                type="range"
-                min={1}
-                max={100}
-                defaultValue={1}
-                value={products}
-                className="mt-9 w-[524.14px] h-[10px] bg-gray-300 rounded-full appearance-none"
-                onChange={handleProductChange}
-                style={{
-                  backgroundImage: `linear-gradient(to right, #4A508E 0%, #4A508E ${products}%, #CCCCCC ${products}%, #CCCCCC 100%)`,
-                }}
-              />
-              <style jsx>
-                {`
-                  input[type="range"]::-webkit-slider-thumb {
-                    -webkit-appearance: none;
-                    appearance: none;
-                    width: 20px; /* Set the width of the thumb */
-                    height: 20px; /* Set the height of the thumb */
-                    background: url(${Rectangle}); /* Set your custom image as background */
-                    background-size: cover; /* Ensure the image covers the entire thumb */
-                    cursor: pointer; /* Change cursor to pointer */
-                  }
-                `}
-              </style>
-              <div className="w-[72px] ml-[226.58px] mt-3 h-[41px] rounded-[15px] border-b-2  border-[#4A508E] text-center font-medium">
-              {products}
-            </div>
-
-
-            </div>
-            <div className="w-[174px] h-[283px] flex flex-col gap-[81px]">
-                  <div className="w-[164px] h-[101px] text-center font-bold text-[22px]">
-                   Monthly Earning
-                  <div className="font-bold text-[#4A508E] text-[40px]"> ₹{monthly.toLocaleString('en-IN')}</div>
-                  </div>
-                  <div  className="w-[163px] h-[101px] text-center font-bold text-[22px]">
-                    Yearly Earning
-                    <div className="font-bold text-[#4A508E] text-[40px]">
-                    ₹{(monthly * 12).toLocaleString('en-IN')}
-                    </div>
-                  </div>
-            </div>
-          </div>
-          <button className="ml-80 w-[125px] h-[54px] rounded-[18px] px-[24px] py-[16px] text-white bg-[#4A508E] font-semibold text-[18px]" onClick={handleCalculate}>
-                  Calculate
-          </button>
-        </div>
       </div>
     </>
   );

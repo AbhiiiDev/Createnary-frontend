@@ -1,38 +1,21 @@
 
-import Navbar from './components/Navbar'
 import SecondPage from './pages/SecondPage'
-import AccordianSection from './sections/AccordianSection'
-import Earning from './sections/Earning'
 import Footer from './components/Footer'
-
-import Link from './sections/Link'
-import Main from './sections/Main'
 import  {BrowserRouter as Router, Route,Routes} from 'react-router-dom';
+import MainPage from './pages/MainPage'
+import Navbar from './components/Navbar';
 
 function App() {
 
 
   return (
 
-
-    <Router>   
-       <Navbar />
+    <Router> 
       <Routes>
-     
-<Route path='/' element={
-  <>
-  <div className='font-sans overflow-hidden '>
-   
-    <Main/>
-    <Link/>
-    <Earning/>
-    <AccordianSection/>
-  </div>
-</>
-}/>
-  <Route path='/secondPage' element={<SecondPage/>}/>
+        <Route path='/' element={<MainPage />} />
+        <Route path='/secondPage' element={<SecondPage />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   )
 }
