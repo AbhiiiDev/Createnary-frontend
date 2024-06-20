@@ -1,88 +1,64 @@
+import React,{useState} from "react";
+import { MdOutlineArrowBackIos } from "react-icons/md";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
+import img from "/assets/Link.jpg"
+
+
+
+
+
 const Link = () => {
+
+
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const slides = [
+    {
+      id: 1,
+      text: "Your audience wants links",
+      subText: "Make it easy for them by linking products to every post and video",
+      image: "/path/to/your/image.png",
+    },
+    // Add more slides if needed
+  ];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+  };
+
+
+
+
+
+
+
+
+
   return (
-
-
-<>
-{/* Laptop View */}
-
-    <div className="hidden w-[1440px] xl:flex mr-4 items-center  h-auto max-h-[724px] mt-[-250px] p-[40px] bg-[#4A508E]">
-        <img src="/src/public/assets/Left.svg" className="w-[18px] h-[33px] cursor-pointer " alt="" />
-      <div className="w-[1264px] h-[644px] flex flex-col items-center gap-[50px] ">
-        <div className="w-[1264px] h-[540px] flex flex-col items-center  gap-[50px] ">
-
-          <div className="w-[518px] h-[85px] flex  flex-col gap-[15px] ">
-            <div className="w-[465px] h-[48px] text-[#F8F9FB] font-bold text-[40px] leading-[48px] ">
-              You audience wants links
+    <>
+        <div className="w-full h-full p-4 md:p-10 bg-[#4A508E] flex justify-center items-center">
+    <div className="hidden md:block w-12 h-12 relative" />
+    <div className="flex-grow flex-shrink-0 flex flex-col justify-center items-center gap-4 md:gap-[50px]">
+        <div className="flex flex-col justify-center items-center gap-4 md:gap-[50px] w-full md:h-[540px]">
+            <div className="flex flex-col justify-start items-center gap-2 md:gap-[15px] text-center">
+                <div className="text-gray-50 text-2xl md:text-[40px] font-bold font-['Urbanist']">Your audience wants links</div>
+                <div className="text-gray-50 text-sm md:text-lg font-medium font-['Urbanist']">Make it easy for them by linking products to every post and video</div>
             </div>
-            <div className="w-[518px] h-[22px] font-[500] text-[#F8F9FB] text-[18px] leading-[21.6px]">
-              Make it easy for them by linking products to every post and video
-            </div>
-          </div>
-
-          <div>
-            <img
-              src="/src/public/assets/Link.jpg"
-              className="w-[720px] h-[405px] bg-transparent rounded-[35px] drop-shadow-lg  "
-              alt=""
-            />
-          </div>
-
+            <img className="w-full md:w-[720px] h-auto md:h-[405px] rounded-[35px] shadow" src="/assets/Link.jpg" alt="Sample" />
         </div>
-        <div className="w-[139px] h-[54px] rounded-[18px] py-[16px] px-[24px] bg-[#F8F9FB]">
-            <span className="text-[#11151D] text-[18px] font-[600px]">Try for Free</span>
-        </div>
-      </div>
-      <img src="/src/public/assets/Right.svg" className="mr-[20px] w-[18px] h-[33px] cursor-pointer " alt="" />
-    </div>
-    
-{/* Tablet View */}
-
-    <div className="hidden xl:hidden mx-auto sm:flex items-center h-auto max-h-[724px] mt-[-250px] p-[40px] bg-[#4A508E]">
-    <img src="/src/public/assets/Left.svg" className="w-[18px] h-[33px] cursor-pointer" alt="" />
-    <div className="w-full max-w-[90%] sm:max-w-[80%] flex flex-col items-center gap-[50px]">
-        <div className="w-full max-w-[90%] sm:max-w-[80%] flex flex-col items-center gap-[50px]">
-            <div className="w-full max-w-[90%] sm:max-w-[80%] flex flex-col gap-[15px]">
-                <div className=" max-w-[90%] w-auto  text-[#F8F9FB] font-bold text-[40px] leading-[48px]">
-                    You audience wants links
-                </div>
-                <div className="w-auto max-w-[90%] sm:max-w-[80%] font-[500] text-[#F8F9FB] text-[18px] leading-[21.6px]">
-                    Make it easy for them by linking products to every post and video
-                </div>
-            </div>
-            <div>
-                <img src="/src/public/assets/Link.jpg" className="w-full mx-auto max-w-[90%] sm:max-w-[80%] h-[auto] bg-transparent rounded-[35px] drop-shadow-lg" alt="" />
-            </div>
-        </div>
-        <div className="w-[143px] h-[54px]  max-w-[90%] sm:max-w-[80%] rounded-[18px] py-[16px] px-[24px] bg-[#F8F9FB]">
-            <span className="text-[#11151D] text-[18px] font-[600]">Try for Free</span>
+        <div className="px-4 py-2 md:px-6 md:py-4 bg-gray-50 rounded-[18px] flex justify-center items-center">
+            <div className="text-zinc-900 text-sm md:text-lg font-semibold font-['Urbanist']">Try for free</div>
         </div>
     </div>
-    <img src="/src/public/assets/Right.svg" className="w-[18px] h-[33px]  cursor-pointer" alt="" />
+    <div className="hidden md:block w-12 h-12 relative origin-top-left -rotate-180" />
 </div>
 
 
-
-
-
-    {/* Mobile View */}
-
-<div className="sm:hidden w-[360px] h-[571px] bg-[#4A508E]">
-<div className="flex flex-col gap-[83px]">
-    <div className="w-[360px] h-[177px] flex flex-col items-center gap-[32px]">
-    <div className="w-[347px] h-[102px] flex flex-col text-center gap-[16px]">
- <div className="font-bold text-[24px] font-sans text-white leading-[28.8px]">Your audience wants links</div>
- <div className="font-[500px] text-[16px] text-center text-white leading-[19.2px]">Make it easy for them by linking products to every post and video</div>
-    </div>
-    <div className="w-[121px] h-[43px] rounded-[12px] px-[20px] py-[12px] bg-[#F8F9FB] font-[600px] text-[16px] leading-[19.2px]">
-Try for Free
-    </div> 
-    </div>
-<div className="w-[360px] h-[250px] ">
-    <img src="/src/public/assets/MobileLink.jpg" className="w-[320px] h-[240px] ml-[20px] rounded-[15px]" alt="" />
-</div>
-</div>
-</div>
-</>
+    </>
   );
 };
 
